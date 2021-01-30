@@ -28,6 +28,8 @@ bazel() {
     fi
 }
 
+export PATH="$PATH:$HOME/bin"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/conor/google-cloud-sdk/path.bash.inc' ]; then . '/Users/conor/google-cloud-sdk/path.bash.inc'; fi
 
