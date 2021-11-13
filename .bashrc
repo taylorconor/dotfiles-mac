@@ -21,11 +21,7 @@ export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 export BAZEL_USE_CPP_ONLY_TOOLCHAIN=1
 
 bazel() {
-    if [[ $1 == "test" || $1 == "build" || $1 == "run" ]]; then
-	command bazel $@ --test_output=all --cxxopt='-std=c++14'
-    else
-	command bazel
-    fi
+  command bazel $@ --config="macos"
 }
 
 export PATH="$PATH:$HOME/bin"
